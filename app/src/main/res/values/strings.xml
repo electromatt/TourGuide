@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Tour Guide</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="city">Spokane, WA</string>
+    <string name="google_search">geo:0,0?q=</string>
 
     <string name="category_parks">Parks</string>
     <string name="category_food">Food</string>

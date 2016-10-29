@@ -25,11 +25,11 @@ public class FoodFragment extends Fragment {
 
         // Create a list of words
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
-        attractions.add(new Attraction(R.string.food_anthonys, R.raw.food_anthonys));
-        attractions.add(new Attraction(R.string.food_clinkerdagger, R.raw.food_clinkerdagger));
-        attractions.add(new Attraction(R.string.food_flying_goat, R.raw.food_flying_goat));
-        attractions.add(new Attraction(R.string.food_manito_taphouse, R.raw.food_manito_taphouse));
-        attractions.add(new Attraction(R.string.food_wildsage, R.raw.food_wildsage));
+        attractions.add(new Attraction(R.string.food_anthonys, R.drawable.food_anthonys));
+        attractions.add(new Attraction(R.string.food_clinkerdagger, R.drawable.food_clinkerdagger));
+        attractions.add(new Attraction(R.string.food_flying_goat, R.drawable.food_flying_goat));
+        attractions.add(new Attraction(R.string.food_manito_taphouse, R.drawable.food_manito_taphouse));
+        attractions.add(new Attraction(R.string.food_wildsage, R.drawable.food_wildsage));
 
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_food);
         ListView listView = (ListView) rootView.findViewById(R.id.list);
@@ -39,7 +39,7 @@ public class FoodFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Attraction word = attractions.get(position);
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q="+getString(word.getDefaultId())+" Spokane, WA");
+                Uri gmmIntentUri = Uri.parse(R.string.google_search+getString(word.getDefaultId())+R.string.city);
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);

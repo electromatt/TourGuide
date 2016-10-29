@@ -22,11 +22,11 @@ public class ParksFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.attraction_list, container, false);
 
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
-        attractions.add(new Attraction(R.string.parks_manito, R.raw.parks_manito));
-        attractions.add(new Attraction(R.string.parks_mt_spokane, R.raw.parks_mt_spokane));
-        attractions.add(new Attraction(R.string.parks_riverfront, R.raw.parks_riverfront));
-        attractions.add(new Attraction(R.string.parks_riverside, R.raw.parks_riverside));
-        attractions.add(new Attraction(R.string.parks_spokane_falls, R.raw.parks_spokane_falls));
+        attractions.add(new Attraction(R.string.parks_manito, R.drawable.parks_manito));
+        attractions.add(new Attraction(R.string.parks_mt_spokane, R.drawable.parks_mt_spokane));
+        attractions.add(new Attraction(R.string.parks_riverfront, R.drawable.parks_riverfront));
+        attractions.add(new Attraction(R.string.parks_riverside, R.drawable.parks_riverside));
+        attractions.add(new Attraction(R.string.parks_spokane_falls, R.drawable.parks_spokane_falls));
 
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_parks);
 
@@ -37,7 +37,7 @@ public class ParksFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Attraction word = attractions.get(position);
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q="+getString(word.getDefaultId())+" Spokane, WA");
+                Uri gmmIntentUri = Uri.parse(R.string.google_search+getString(word.getDefaultId())+R.string.city);
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);

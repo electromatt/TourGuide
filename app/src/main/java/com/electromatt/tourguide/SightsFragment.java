@@ -21,11 +21,11 @@ public class SightsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.attraction_list, container, false);
 
         final ArrayList<Attraction> attractions = new ArrayList<Attraction>();
-        attractions.add(new Attraction(R.string.sights_downtown_spokane, R.raw.sights_downtown_spokane));
-        attractions.add(new Attraction(R.string.sights_gonzaga_university, R.raw.sights_gonzaga_university));
-        attractions.add(new Attraction(R.string.sights_greenbluff, R.raw.sights_greenbluff));
-        attractions.add(new Attraction(R.string.sights_st_johns_cathedral, R.raw.sights_st_johns_cathedral));
-        attractions.add(new Attraction(R.string.sights_steamplant_square, R.raw.sights_steamplant_square));
+        attractions.add(new Attraction(R.string.sights_downtown_spokane, R.drawable.sights_downtown_spokane));
+        attractions.add(new Attraction(R.string.sights_gonzaga_university, R.drawable.sights_gonzaga_university));
+        attractions.add(new Attraction(R.string.sights_greenbluff, R.drawable.sights_greenbluff));
+        attractions.add(new Attraction(R.string.sights_st_johns_cathedral, R.drawable.sights_st_johns_cathedral));
+        attractions.add(new Attraction(R.string.sights_steamplant_square, R.drawable.sights_steamplant_square));
 
         AttractionAdapter adapter = new AttractionAdapter(getActivity(), attractions, R.color.category_sights);
 
@@ -36,7 +36,7 @@ public class SightsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Attraction word = attractions.get(position);
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q="+getString(word.getDefaultId())+" Spokane, WA");
+                Uri gmmIntentUri = Uri.parse(R.string.google_search+getString(word.getDefaultId())+R.string.city);
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
