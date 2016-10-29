@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#787878</color>
+    <color name="primary_dark_color">#636363</color>
+    <color name="blue_background">#efefef</color>
+    <color name="category_parks">#b42823</color>
+    <color name="category_food">#379237</color>
+    <color name="category_sights">#85348e</color>
+    <color name="category_shopping">#2b379f</color>
+</resources>

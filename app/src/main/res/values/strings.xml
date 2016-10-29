@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Tour Guide</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="category_parks">Parks</string>
+    <string name="category_food">Food</string>
+    <string name="category_shopping">Shopping</string>
+    <string name="category_sights">Sights</string>
+
+    <string name="food_clinkerdagger">Clinkerdagger</string>
+    <string name="food_wildsage">Wild Sage american Bistro</string>
+    <string name="food_flying_goat">The Flying Goat</string>
+    <string name="food_anthonys">Anthony\'s at Spokane Falls</string>
+    <string name="food_manito_taphouse">Manito Tap House</string>
+
+    <string name="parks_manito">Manito Park</string>
+    <string name="parks_riverside">Riverside Park</string>
+    <string name="parks_riverfront">Riverfront Park</string>
+    <string name="parks_spokane_falls">Spokane Falls</string>
+    <string name="parks_mt_spokane">Mount Spokane</string>
+
+    <string name="shopping_valley_mall">Spokane Valley Mall</string>
+    <string name="shopping_aunties">Aunties Bookstore</string>
+    <string name="shopping_paradise_fibers">Paradise Fibers</string>
+    <string name="shopping_steamplant_square">Steam Plant Square</string>
+    <string name="shopping_river_park_square">River Park Square</string>
+
+    <string name="sights_downtown_spokane">Downtown Spokane</string>
+    <string name="sights_steamplant_square">Steam Plant Square</string>
+    <string name="sights_greenbluff">Green Bluff</string>
+    <string name="sights_gonzaga_university">Gonzaga University</string>
+    <string name="sights_st_johns_cathedral">St. John\'s Cathedral</string>
+    </resources>
